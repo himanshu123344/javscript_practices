@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise function</title>
+</head>
+<body>
+      <script>
+          let promise = new Promise (function(resolve, reject){
+            //  asynchronous function
+              let iamgooddeve = true;
+              if(iamgooddeve){
+                setTimeout(() => {
+                    resolve('i am a good developer')
+                }, 1000)
+              }
+
+              else{
+                  reject('i am not good developer')
+              }
+   
+          });
+               
+          promise.then((res) => {
+              console.log(res)
+          }).catch(console.error())
+      </script>
+</body>
+</html>
